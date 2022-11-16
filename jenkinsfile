@@ -1,29 +1,24 @@
 pipeline {
-    agent any//change to specific node if you want
+    agent any
 
     stages {
-        stage("Compile") {
+        stage("create package") {
             steps{
-                sh 'cd Homework2/demo && mvn clean package'
+                sh 'mvn clean package'
             }
         }
 
-        stage("Save Artifact"){
+        stage("save artifact"){
             steps {
-                 archiveArtifacts artifacts: 'Homework2/demo/target/*.jar'
+                 archiveArtifacts artifacts: 'target/*.jar'
+            }
+        }
+            stage("slack"){
+                steps {
+                    slackSend channel: 'channel 1', message: 'Hello channel 1'
                 }
             }
         
-    }
-
-    post {
-        success {
-            slackSend channel: 'some channel', message: 'stonks'
-        }
-         
-        failure {
-            slackSend channel: 'some channel', message: 'not stonks'
-        }
     }
 
 }
