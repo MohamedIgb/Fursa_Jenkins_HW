@@ -1,6 +1,6 @@
 # Fursa_Jenkins_HW
 
-* in this task I Created a Java Application Managed by Maven that:
+* in this task I created a java application managed by Maven that:
 - Reads the “Breaking News” from YNet new service "http://www.ynet.co.il/Integration/StoryRss2.xml"
 - presenting an html file that runs on localhost 8080
 
