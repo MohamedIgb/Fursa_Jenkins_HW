@@ -13,6 +13,7 @@ pipeline {
                  archiveArtifacts artifacts: 'target/*.jar'
             }
         }
+    }
         post {
             success {
                 slackSend channel: 'channel-1', message: 'hello channel-1'
@@ -25,4 +26,4 @@ pipeline {
         
     }
 
-}
+
