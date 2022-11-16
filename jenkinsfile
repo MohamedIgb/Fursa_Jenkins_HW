@@ -13,11 +13,15 @@ pipeline {
                  archiveArtifacts artifacts: 'target/*.jar'
             }
         }
-            stage("slack"){
-                steps {
-                    slackSend channel: 'channel 1', message: 'Hello channel 1'
-                }
+        post {
+            success {
+                slackSend channel: 'channel-1', message: 'hello channel-1'
             }
+         
+            failure {
+                slackSend channel: 'channel-1', message: 'channel-1 failed'
+            }
+        }
         
     }
 
