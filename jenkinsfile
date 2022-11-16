@@ -1,0 +1,29 @@
+pipeline {
+    agent any//change to specific node if you want
+
+    stages {
+        stage("Compile") {
+            steps{
+                sh 'cd Homework2/demo && mvn clean package'
+            }
+        }
+
+        stage("Save Artifact"){
+            steps {
+                 archiveArtifacts artifacts: 'Homework2/demo/target/*.jar'
+                }
+            }
+        
+    }
+
+    post {
+        success {
+            slackSend channel: 'some channel', message: 'stonks'
+        }
+         
+        failure {
+            slackSend channel: 'some channel', message: 'not stonks'
+        }
+    }
+
+}
