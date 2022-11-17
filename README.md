@@ -1,9 +1,9 @@
   # DevOps Jenkins Task  
 ###### In this task I created a java application managed by Maven, and a Jenkins CI/CD pipeline Job to Build and Deploy (Run) the application on a new instance.
-	- Reads the “Breaking News” from YNet new service "http://www.ynet.co.il/Integration/StoryRss2.xml".  
-	- Presenting an html file that runs on localhost 8080.  
-	- Creates a Jar artifact and archives it.  
-	- Sending a slack.   
+- Reads the “Breaking News” from YNet new service "http://www.ynet.co.il/Integration/StoryRss2.xml".  
+- Presenting an html file that runs on localhost 8080.  
+- Creates a Jar artifact and archives it.  
+- Sending a slack.   
 ------------  
 ### To run this app:
 1. Download [Java 17](https://www.oracle.com/java/technologies/downloads/#jdk17-mac "Java 17"). 
