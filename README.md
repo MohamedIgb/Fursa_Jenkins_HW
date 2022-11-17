@@ -1,5 +1,5 @@
   # DevOps Jenkins Task  
-######In this task I created a java application managed by Maven, and a Jenkins CI/CD pipeline Job to Build and Deploy (Run) the application on a new instance.
+###### In this task I created a java application managed by Maven, and a Jenkins CI/CD pipeline Job to Build and Deploy (Run) the application on a new instance.
 	- Reads the “Breaking News” from YNet new service "http://www.ynet.co.il/Integration/StoryRss2.xml".  
 	- Presenting an html file that runs on localhost 8080.  
 	- Creates a Jar artifact and archives it.  
@@ -8,14 +8,14 @@
 ### To run this app:
 1. Download [Java 17](https://www.oracle.com/java/technologies/downloads/#jdk17-mac "Java 17"). 
 2. Clone the [repository](https://github.com/MohamedIgb/Fursa_Jenkins_HW.git "repository"). 
-3. ######In your terminal:  
+###### 3. In your terminal:  
 ```sh  
 $ mvn clean package  
 $ java -jar target/*.jar  
 ```  
 
 ------------
-###Jenkins stage view:
+### Jenkins stage view:
 ![Jenkins](https://user-images.githubusercontent.com/92742400/202436150-4f08f2c2-e463-4663-a311-d5d70c4de789.jpeg)
 
 
